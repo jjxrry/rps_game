@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
     <div class="header">
-        <h1>HUMANITY vs MACHINES</h1>
+        <h1>A Simple Game</h1>
     </div>
     <div class="prompt">
-        <h2>What will be your weapon?</input>
+        <h2>What is your destiny?</input>
     </div>
     <div class="button-container">
-            <button class="bigButton" id="btnRock">ROCK</button>
-            <button class="bigButton" id="btnPaper">PAPER</button>
-            <button class="bigButton" id="btnScissors">SCISSORS</button>
-    </div>
-    <div class="resultCard">Who will win?</div>
+            <button class="bigButton" id="btnRock"><img src="./assets/rock.png" alt="rock img" class="buttonImg"></button> <!-- force !-->
+            <button class="bigButton" id="btnPaper"><img src="./assets/paper.png" alt="paper img" class="buttonImg"></button> <!-- intellect !-->
+            <button class="bigButton" id="btnScissors"><img src="./assets/scissors.png" alt="scissors img" class="buttonImg"></button> <!-- cunning !-->
+        </div>
+    <div class="resultCard">Who will emerge the victor?</div>
     <div class="score-container">
         <div class="humanScore"></div>
         <div class="robotScore"></div>

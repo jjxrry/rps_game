@@ -11,8 +11,8 @@ let userSelect;
 let pcScore = 0;
 let userScore = 0;
 
-pcScoreTrack.textContent = `Player: ${userScore}`;
-humanScoreTrack.textContent = `Computer: ${pcScore}`;
+humanScoreTrack.textContent = `Player: ${userScore}`;
+pcScoreTrack.textContent = `Enemy: ${pcScore}`;
 
 userRock.addEventListener('click', () => handleClick('rock'));
 userPaper.addEventListener('click', () => handleClick('paper'));
@@ -36,26 +36,23 @@ function playRound(userSelect, pcSelect) {
     (userSelect === 'scissors' && pcSelect === 'paper')){
         ++userScore;
         userSelect = '';
-        resultReport.textContent = `Player win!`;
-        pcScoreTrack.textContent = `Player: ${userScore}`;
-        humanScoreTrack.textContent = `Computer: ${pcScore}`;
+        resultReport.textContent = `You are victorious. For now.`;
+        humanScoreTrack.textContent = `Player: ${userScore}`;
+        pcScoreTrack.textContent = `Enemy: ${pcScore}`;
     }
     else if (userSelect === pcSelect) {
         userSelect = '';
-        resultReport.textContent = `A tie! Fight again!`;
-        pcScoreTrack.textContent = `Player: ${userScore}`;
-        humanScoreTrack.textContent = `Computer: ${pcScore}`;
+        resultReport.textContent = `It seems you are equally matched.`;
+        humanScoreTrack.textContent = `Player: ${userScore}`;
+        pcScoreTrack.textContent = `Enemy: ${pcScore}`;
     }
     else {
         ++pcScore;
         userSelect = '';
-        resultReport.textContent = `CPU win!`;
-        pcScoreTrack.textContent = `Player: ${userScore}`;
-        humanScoreTrack.textContent = `Computer: ${pcScore}`;
+        resultReport.textContent = `Try not to underestimate your enemies.`;
+        humanScoreTrack.textContent = `Player: ${userScore}`;
+        pcScoreTrack.textContent = `Enemy: ${pcScore}`;
     }
-}
-
-function gameResult(userScore, pcScore) {
 }
 
 function runGame(userSelect) {
@@ -66,19 +63,19 @@ function runGame(userSelect) {
     console.log(`pc: ${pcScore} \nplayer: ${userScore}`)
 
     if (userScore === 5) {
-        resultReport.textContent = `HOORAY! Humanity has prevailed!`;
-        pcScore = 0;
+        resultReport.textContent = `Fortune favors those who dare to live. You have won.`;
         userScore = 0;
-        pcScoreTrack.textContent = `Player: ${userScore}`;
-        humanScoreTrack.textContent = `Computer: ${pcScore}`;
+        humanScoreTrack.textContent = `Player: 5`;
+        pcScoreTrack.textContent = `Enemy: ${pcScore}`;
+        pcScore = 0;
         // btnContainer.remove('div');
     }
     else if (pcScore === 5) {
-        resultReport.textContent = `OH NO! Humanity has lost.`;
+        resultReport.textContent = `Do not give in to defeat, try again.`;
         pcScore = 0;
+        humanScoreTrack.textContent = `Player: ${userScore}`;
+        pcScoreTrack.textContent = `Enemy: 5`;
         userScore = 0;
-        pcScoreTrack.textContent = `Player: ${userScore}`;
-        humanScoreTrack.textContent = `Computer: ${pcScore}`;
         // btnContainer.remove('div');
     }
 }
