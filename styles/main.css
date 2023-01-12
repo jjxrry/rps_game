@@ -25,6 +25,10 @@ body {
     height: 250px;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 .header {
     display: flex;
     flex-direction: row;

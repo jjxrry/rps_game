@@ -85,3 +85,12 @@ function runGame(userSelect) {
 //     pcScore = 0;
 //     return userScore, pcScore;
 // }
+
+
+////animations////
+gsap.from('.bigButton', { duration: 1.5, x: 1000, opacity: 0, stagger: .5, ease: 'slow(0.3, 0.4, false)'})
+
+gsap.from('.prompt', {duration: 3, opacity: 0, ease: 'power2.in'})
+gsap.from('.header', {duration: 1, opacity: 0, ease: 'power2.in'})
+gsap.from('.resultCard', {duration: 5, opacity: 0, ease: 'power4.in'})
+gsap.from('.score-container', {duration: 6, opacity: 0, ease: 'power4.in'})
